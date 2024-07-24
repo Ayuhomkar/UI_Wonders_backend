@@ -22,7 +22,7 @@ app.post('/send-email', (req, res) => {
         from: email,
         to: 'ayushahomkar@gmail.com',
         subject: subject,
-        text: msg
+        text: `from -${email} \n msg-${msg}` 
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
